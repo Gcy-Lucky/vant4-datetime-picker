@@ -2,6 +2,7 @@
   <div>
     <van-field
       label="截止时间"
+      v-model="displayText"
       readonly
       clickable
       :value="displayText"
