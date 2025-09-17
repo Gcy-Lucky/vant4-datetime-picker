@@ -1,31 +1,9 @@
-<template>
-  <div>
-    <van-field
-      label="截止时间"
-      v-model="displayText"
-      readonly
-      clickable
-      :value="displayText"
-      placeholder="请选择截止时间"
-      @click="showPicker = true"
-    />
-
-    <van-popup v-model:show="showPicker" round position="bottom">
-      <van-picker
-        title="选择截止时间"
-        :columns="columns"
-        @confirm="onConfirm"
-        @cancel="() => showPicker = false"
-        @change="onChange"
-      />
-    </van-popup>
-  </div>
-</template>
-
 <script setup>
 import { ref } from 'vue'
 
+// 弹出控制
 const showPicker = ref(false)
+// 显示框内容
 const displayText = ref('')
 
 // 当前时间
@@ -127,3 +105,26 @@ const onChange = ({ columnIndex, selectedValues }) => {
   }
 }
 </script>
+<template>
+  <div>
+    <van-field
+      label="截止时间"
+      v-model="displayText"
+      readonly
+      clickable
+      :value="displayText"
+      placeholder="请选择截止时间"
+      @click="showPicker = true"
+    />
+
+    <van-popup v-model:show="showPicker" round position="bottom">
+      <van-picker
+        title="选择截止时间"
+        :columns="columns"
+        @confirm="onConfirm"
+        @cancel="() => showPicker = false"
+        @change="onChange"
+      />
+    </van-popup>
+  </div>
+</template>
