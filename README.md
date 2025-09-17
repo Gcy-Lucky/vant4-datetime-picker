@@ -22,7 +22,7 @@ Official Vant4 only provides separate date-picker and time-picker, so this combi
 
 # How to Use
 1. Copy the code into your project.
-2. Import Vant 4 components (e.g. `Field`, `Popup`, `Picker`) in `main.ts` or your global registration file.
+2. Import Vant 4 components (e.g. `Field`, `Popup`, `Picker`) in `main.ts(or js)` or your global registration file.
 3. Use `<App />` or the component in your page.
 
 # Extending
